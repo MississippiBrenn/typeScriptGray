@@ -24,3 +24,31 @@ const exampleObj = {
     prop2: true,
 };
 exampleObj.prop1 = 'John';
+let evh = {
+    name: 'Eddie',
+    active: false,
+    albums: [1984, 5150, 'OU812'],
+};
+let jp = {
+    active: true,
+    albums: ['I', 'II', 'IV'],
+};
+const greetGuitarist = (guitarist) => {
+    //narrowing
+    if (guitarist.name) {
+        return `Hello ${guitarist.name.toUpperCase()}!`;
+    }
+    return `Hello!`;
+};
+console.log(greetGuitarist(jp));
+//Enum
+// 'Unlike myst TypeScript features, Enums are not a type-level addition to Javascript but something added to the language and runtime.';
+var Grade;
+(function (Grade) {
+    Grade[Grade["U"] = 1] = "U";
+    Grade[Grade["D"] = 2] = "D";
+    Grade[Grade["C"] = 3] = "C";
+    Grade[Grade["B"] = 4] = "B";
+    Grade[Grade["A"] = 5] = "A";
+})(Grade || (Grade = {}));
+console.log(Grade.U);
